@@ -1,12 +1,8 @@
 # pypluto
 
-```markdown
-
 pypluto is a Python library for controlling Pluto drones. This library provides various methods to interact with the drone, including connecting, controlling movements, and accessing sensor data.
 
 ## Installation
-
-To install the PlutoLibrary locally, navigate to the root directory of your package (where `setup.py` is located) and run:
 
 ```bash
 pip install pypluto

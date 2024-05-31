@@ -10,7 +10,7 @@ setup(
     description='A library for controlling Pluto drones',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/DronaAviation/pypluto.git',
+    url='https://github.com/DronaAviation/plutocontrol.git',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',

@@ -1,11 +1,11 @@
-# pypluto
+# plutocontrol
 
-pypluto is a Python library for controlling Pluto drones. This library provides various methods to interact with the drone, including connecting, controlling movements, and accessing sensor data.
+plutocontrol is a Python library for controlling Pluto drones. This library provides various methods to interact with the drone, including connecting, controlling movements, and accessing sensor data.
 
 ## Installation
 
 ```bash
-pip install pypluto
+pip install plutocontrol
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ After installing the package, you can import and use the `Pluto` class in your P
 #### Example 1
 
 ```python
-from pypluto import Pluto
+from plutocontrol import Pluto
 
 # Create an instance of the Pluto class
 pluto = Pluto()

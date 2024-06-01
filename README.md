@@ -40,8 +40,6 @@ pluto.disconnect()
 
 ### Pluto Class
 
-#### `__init__()`
-Initializes the Pluto object with default RC values and starts the write function in a separate thread.
 
 #### `connect()`
 Connects to the drone server.
@@ -57,11 +55,11 @@ Disconnects from the drone server.
 pluto.disconnect()
 ```
 
-#### `set_camera_ip_port(ip, port)`
-Sets the IP and port for the camera connection.
+#### `cam`
+Sets the IP and port for the camera connection. should be intialized before pluto.connect().
 
 ```python
-pluto.set_camera_ip_port('192.168.0.2', 9060)
+pluto.cam()
 ```
 
 #### `arm()`
@@ -307,28 +305,4 @@ Returns the battery percentage from the drone.
 
 ```python
 battery_percentage = pluto.get_battery_percentage()
-```
-
-#### `send_packet(buff)`
-Sends a packet to the drone.
-
-```python
-pluto.send_packet(buff)
-```
-
-#### `receive_packet()`
-Receives a packet from the drone.
-
-```python
-packet = pluto.receive_packet()
-```
-
-#### `read16(arr)`
-Unpacks a byte array to extract 16-bit values.
-
-```python
-value = pluto.read16(arr)
-```
-
-With this `README.md`, users will have a comprehensive understanding of the library's functionality and how to use it effectively.
 ```

@@ -41,79 +41,56 @@ pluto.disconnect()
 ### Pluto Class
 
 
-#### `connect()`
-Connects to the drone server.
+#### `Connection`
+
+Commands to connect/ disconnect to the drone server.
 
 ```python
+#Connects from the drone server.
 pluto.connect()
-```
 
-#### `disconnect()`
-Disconnects from the drone server.
-
-```python
+#Disconnects from the drone server.
 pluto.disconnect()
 ```
 
-#### `cam`
+#### `Comera module`
 Sets the IP and port for the camera connection. should be intialized before pluto.connect().
 
 ```python
 pluto.cam()
 ```
 
-#### `arm()`
-Arms the drone, setting it to a ready state.
+#### `Arm and Disarm Commands`
 
 ```python
+#Arms the drone, setting it to a ready state.
 pluto.arm()
+
+#Disarms the drone, stopping all motors.
+Pluto.disarm()
 ```
 
-#### `box_arm()`
-Arms the drone with the throttle set to 1800.
+#### `Pitch Commands`
 
 ```python
-pluto.box_arm()
-```
-
-#### `disarm()`
-Disarms the drone, stopping all motors.
-
-```python
-pluto.disarm()
-```
-
-#### `forward()`
-Sets the drone to move forward.
-
-```python
+#Sets the drone to move forward.
 pluto.forward()
-```
 
-#### `backward()`
-Sets the drone to move backward.
-
-```python
+#Sets the drone to move backward.
 pluto.backward()
 ```
 
-#### `left()`
-Sets the drone to move left (roll).
+#### `Roll Commands`
 
 ```python
+#Sets the drone to move left (roll).
 pluto.left()
-```
 
-#### `right()`
-Sets the drone to move right (roll).
-
-```python
+#Sets the drone to move right (roll).
 pluto.right()
 ```
 
 #### `Yaw Commands`
-
-Commands to yaw drone.
 
 ```python
 #Sets the drone to yaw right.
@@ -127,7 +104,7 @@ pluto.left_yaw()
 
 Increase/ Decrease the drone's height.
 
-```Bash
+```Python
 #Increases the drone's height.
 pluto.increase_height()
 
@@ -137,7 +114,7 @@ pluto.decrease_height()
 
 #### `Takeoff and Land`
 
-```Bash
+```Python
 #Arms the drone and prepares it for takeoff.
 pluto.take_off()
 
@@ -148,7 +125,7 @@ pluto.land()
 #### `Developer Mode`
 Toggle Developer Mode
 
-```Bash
+```Python
 #Turns the Developer mode ON
 pluto.DevOn()
 
@@ -159,139 +136,91 @@ pluto.DevOff()
 #### `motor_speed(motor_index, speed)`
 Sets the speed of a specific motor (motor index from 0 to 3).
 
-```Bash
+```Python
 pluto.motor_speed(0, 1500)
 ```
 
-#### `trim_left_roll()`
-Trims the left roll by increasing the RC roll value.
+#### `Get MSP_ALTITUDE Values`
 
 ```python
-pluto.trim_left_roll()
-```
-
-#### `get_height()`
-Returns the height of the drone from the sensors.
-
-```python
+#Returns the height of the drone from the sensors.
 height = pluto.get_height()
-```
 
-#### `get_vario()`
-Returns the rate of change of altitude from the sensors.
-
-```python
+#Returns the rate of change of altitude from the sensors.
 vario = pluto.get_vario()
 ```
 
-#### `get_roll()`
-Returns the roll value from the drone.
+#### `Get MSP_ALTITUDE Values`
 
 ```python
+#Returns the roll value from the drone.
 roll = pluto.get_roll()
-```
 
-#### `get_pitch()`
-Returns the pitch value from the drone.
-
-```python
+#Returns the pitch value from the drone.
 pitch = pluto.get_pitch()
-```
 
-#### `get_yaw()`
-Returns the yaw value from the drone.
-
-```python
+#Returns the yaw value from the drone.
 yaw = pluto.get_yaw()
 ```
 
-#### `get_acc_x()`
-Returns the accelerometer value for the x-axis.
+#### `Get MSP_RAW_IMU Values`
+
+### `Accelerometer`
+Returns the accelerometer value for the x,y,z - axis.
 
 ```python
+#Returns the accelerometer value for the x-axis.
 acc_x = pluto.get_acc_x()
-```
 
-#### `get_acc_y()`
-Returns the accelerometer value for the y-axis.
-
-```python
+#Returns the accelerometer value for the y-axis.
 acc_y = pluto.get_acc_y()
-```
 
-#### `get_acc_z()`
-Returns the accelerometer value for the z-axis.
-
-```python
+#Returns the accelerometer value for the z-axis.
 acc_z = pluto.get_acc_z()
 ```
 
-#### `get_gyro_x()`
-Returns the gyrometer value for the x-axis.
+### `Gyroscope`
 
 ```python
+#Returns the Gyroscope value for the x-axis.
 gyro_x = pluto.get_gyro_x()
-```
 
-#### `get_gyro_y()`
-Returns the gyrometer value for the y-axis.
-
-```python
+#Returns the Gyroscope value for the y-axis.
 gyro_y = pluto.get_gyro_y()
-```
 
-#### `get_gyro_z()`
-Returns the gyrometer value for the z-axis.
-
-```python
+#Returns the Gyroscope value for the z-axis.
 gyro_z = pluto.get_gyro_z()
 ```
 
-#### `get_mag_x()`
-Returns the magnetometer value for the x-axis.
+### `Magnetometer`
 
 ```python
+#Returns the Magnetometer value for the x-axis.
 mag_x = pluto.get_mag_x()
-```
 
-#### `get_mag_y()`
-Returns the magnetometer value for the y-axis.
-
-```python
+Returns the Magnetometer value for the y-axis.
 mag_y = pluto.get_mag_y()
-```
 
-#### `get_mag_z()`
-Returns the magnetometer value for the z-axis.
-
-```python
+Returns the Magnetometer value for the z-axis.
 mag_z = pluto.get_mag_z()
 ```
 
-#### `calibrate_acceleration()`
-Calibrates the accelerometer.
+#### `Caalibration Commands`
 
 ```python
+#Calibrates the accelerometer.
 pluto.calibrate_acceleration()
-```
 
-#### `calibrate_magnetometer()`
-Calibrates the magnetometer.
-
-```python
+#Calibrates the magnetometer.
 pluto.calibrate_magnetometer()
 ```
 
-#### `get_battery()`
-Returns the battery value in volts from the drone.
+#### `Get MSP_Analog Values`
 
 ```python
+#Returns the battery value in volts from the drone.
 battery = pluto.get_battery()
-```
 
-#### `get_battery_percentage()`
-Returns the battery percentage from the drone.
-
-```python
+#Returns the battery percentage from the drone.
 battery_percentage = pluto.get_battery_percentage()
 ```

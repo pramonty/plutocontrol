@@ -111,31 +111,23 @@ Sets the drone to move right (roll).
 pluto.right()
 ```
 
-#### `left_yaw()`
-Sets the drone to yaw left.
+#### `Yaw Commands`
+
+Commands to yaw drone.
 
 ```python
+#Sets the drone to yaw right.
+pluto.right_yaw()
+
+#Sets the drone to yaw left.
 pluto.left_yaw()
 ```
 
-#### `right_yaw()`
-Sets the drone to yaw right.
+#### `Throttle Commands`
 
-```python
-pluto.right_yaw()
-```
-
-#### `reset()`
-Resets the RC values to the default state.
-
-```python
-pluto.reset()
-```
-
-#### `Throttle Control`
 Increase/ Decrease the drone's height.
 
-```python
+```Bash
 #Increases the drone's height.
 pluto.increase_height()
 
@@ -143,32 +135,32 @@ pluto.increase_height()
 pluto.decrease_height()
 ```
 
-#### `take_off()`
-Arms the drone and prepares it for takeoff.
+#### `Takeoff and Land`
 
-```python
+```Bash
+#Arms the drone and prepares it for takeoff.
 pluto.take_off()
-```
 
-#### `land()`
-Commands the drone to land.
-
-```python
+#Commands the drone to land.
 pluto.land()
 ```
 
-#### `rc_values()`
-Returns the current RC values.
+#### `Developer Mode`
+Toggle Developer Mode
 
-```python
-values = pluto.rc_values()
+```Bash
+#Turns the Developer mode ON
+pluto.DevOn()
+
+#Turns the Developer mode OFF
+pluto.DevOff()
 ```
 
 #### `motor_speed(motor_index, speed)`
 Sets the speed of a specific motor (motor index from 0 to 3).
 
-```python
-pluto.motor_speed(0, 1200)
+```Bash
+pluto.motor_speed(0, 1500)
 ```
 
 #### `trim_left_roll()`

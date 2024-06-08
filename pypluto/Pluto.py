@@ -94,6 +94,14 @@ class pluto:
         self.rcThrottle = 1300
         self.rcAUX4 = 1200
 
+    def devOn(self):
+        print("Developer mode ON")
+        self.rcAUX2 = 1500
+        
+    def devOff(self):
+        print("Developer mode OFF")
+        self.rcAUX2 = 1000
+        
     def forward(self):
         print("Forward")
         self.rcPitch = 1600
@@ -435,7 +443,7 @@ class pluto:
 
     def get_battery_percentage(self):
         data = []
-        self.create_send_msp_packet(MSP_ANALOG, data) 
+        self.create_packet_msp(MSP_ANALOG, data) 
         for i in range(RETRY_COUNT):
             data = self.receive_packet()
             i = 0
@@ -458,4 +466,3 @@ class pluto:
             return (arr[1] << 8) + (arr[0] & 0xff)
         else:
             return (-65535 + (arr[1] << 8) + (arr[0] & 0xff))
-

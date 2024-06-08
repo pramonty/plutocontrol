@@ -132,17 +132,14 @@ Resets the RC values to the default state.
 pluto.reset()
 ```
 
-#### `increase_height()`
-Increases the drone's height.
+#### `Throttle Control`
+Increase/ Decrease the drone's height.
 
 ```python
+#Increases the drone's height.
 pluto.increase_height()
-```
 
-#### `decrease_height()`
-Decreases the drone's height.
-
-```python
+#Decreases the drone's height.
 pluto.decrease_height()
 ```
 

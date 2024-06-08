@@ -165,7 +165,7 @@ yaw = pluto.get_yaw()
 
 #### `Get MSP_RAW_IMU Values`
 
-### `Accelerometer`
+##### `Accelerometer`
 Returns the accelerometer value for the x,y,z - axis.
 
 ```python
@@ -179,7 +179,7 @@ acc_y = pluto.get_acc_y()
 acc_z = pluto.get_acc_z()
 ```
 
-### `Gyroscope`
+#### `Gyroscope`
 
 ```python
 #Returns the Gyroscope value for the x-axis.
@@ -192,7 +192,7 @@ gyro_y = pluto.get_gyro_y()
 gyro_z = pluto.get_gyro_z()
 ```
 
-### `Magnetometer`
+#### `Magnetometer`
 
 ```python
 #Returns the Magnetometer value for the x-axis.

@@ -180,6 +180,7 @@ acc_z = pluto.get_acc_z()
 ```
 
 #### `Gyroscope`
+Returns the Gyroscope value for the x,y,z - axis.
 
 ```python
 #Returns the Gyroscope value for the x-axis.
@@ -193,19 +194,20 @@ gyro_z = pluto.get_gyro_z()
 ```
 
 #### `Magnetometer`
+Returns the Magntometer value for the x,y,z - axis.
 
 ```python
 #Returns the Magnetometer value for the x-axis.
 mag_x = pluto.get_mag_x()
 
-Returns the Magnetometer value for the y-axis.
+#Returns the Magnetometer value for the y-axis.
 mag_y = pluto.get_mag_y()
 
-Returns the Magnetometer value for the z-axis.
+#Returns the Magnetometer value for the z-axis.
 mag_z = pluto.get_mag_z()
 ```
 
-#### `Caalibration Commands`
+#### `Calibration Commands`
 
 ```python
 #Calibrates the accelerometer.
